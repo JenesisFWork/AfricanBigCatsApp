@@ -31,6 +31,8 @@ public class Menu {
         */
 
         printCommand('c',"[C]reates a big cat");
+        printCommand(command: 'd', desc:"[D]eletes a big cat"); // the delete command
+        printCommand(command: 'f', desc:"[F]inds a big cat"); // the find command
         printCommand('l',"[L]ists all big Cats");
         printCommand('q',"[Q]uits");
 
@@ -76,6 +78,14 @@ public class Menu {
 
             case 'c':
                 executeCreate(catList);
+                break;
+
+            case 'd':
+                executeDelete(catList);
+                break;
+
+            case 'f':
+                executeFind(catList);
                 break;
 
             case 'l':
@@ -153,6 +163,20 @@ public class Menu {
 
         Panthera cat = getNewCat(name);
         catList.add(cat);
+
+    }
+
+    // deletes a big cat
+    public void executeDelete(LinkedList<Panthera> catList) {
+        System.out.println();
+        System.out.print("Enter a name for the big cat to delete: ");
+
+    }
+
+    // finds a big cat
+    public void executeFind(LinkedList<Panthera> catList) {
+        System.out.println();
+        System.out.print("Enter a name for the big cat to find: ");
 
     }
 
