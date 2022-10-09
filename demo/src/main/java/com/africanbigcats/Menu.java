@@ -31,8 +31,8 @@ public class Menu {
         */
 
         printCommand('c',"[C]reates a big cat");
-        printCommand(command: 'd', desc:"[D]eletes a big cat"); // the delete command
-        printCommand(command: 'f', desc:"[F]inds a big cat"); // the find command
+        printCommand('d',"[D]eletes a big cat"); // the delete command
+        printCommand('f', "[F]inds a big cat"); // the find command
         printCommand('l',"[L]ists all big Cats");
         printCommand('q',"[Q]uits");
 
