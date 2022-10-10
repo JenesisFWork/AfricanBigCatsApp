@@ -2,7 +2,7 @@ package com.africanbigcats;
 
 /*
  * Panthera base class that simulates GPS information
- * Like the Lion.java class, it's based on teh Tiger.java class
+ * Like the Lion.java class, it's based on the Tiger.java class
  */
 public class Jaguar extends Panthera {
 
