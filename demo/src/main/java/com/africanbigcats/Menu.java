@@ -81,11 +81,11 @@ public class Menu {
                 break;
 
             case 'd':
-                executeDelete(catList);
+                executeDelete(catList); //delete code switch-case
                 break;
 
             case 'f':
-                executeFind(catList);
+                executeFind(catList); //find code switch-case
                 break;
 
             case 'l':
@@ -167,17 +167,63 @@ public class Menu {
     }
 
     // deletes a big cat
-    public void executeDelete(LinkedList<Panthera> catList) {
-        System.out.println();
-        System.out.print("Enter a name for the big cat to delete: ");
+    // got help from a tutor
+    public void executeDelete(LinkedList<Panthera> catList){
+        int listSize = catList.size();
+        if (listSize == 0){
+            System.out.println("Fail to delete, there is no cat in the list to delete");
+            System.out.println();
+        }
+        else{
+            // get the name
+            System.out.println();
+            System.out.print("Delete cat name: ");
+            String name = input.nextLine();
+            System.out.println();
 
+            boolean wasRemoved = false;
+            for (int i = 0; i < listSize; i++){
+                if (catList.get(i).name().equals(name)){
+                    catList.remove(i);
+                    wasRemoved = true;
+                    System.out.println(String.format("Delete sucessful, %s has been removed", name));
+                    System.out.println();
+                    break;
+                }
+            }
+            if (wasRemoved == false){
+                System.out.println(String.format("Fail to delete, there is no cat name %s to delete", name));
+                System.out.println();
+            }
+        }
     }
 
     // finds a big cat
+    //also got help from a tutor
     public void executeFind(LinkedList<Panthera> catList) {
         System.out.println();
         System.out.print("Enter a name for the big cat to find: ");
+      String name = input.nextLine();
+        System.out.println();
 
+        int listSize = catList.size();
+        boolean catFound = false;
+        if(listSize > 0){
+            for (int i = 0; i < listSize; i++){
+                if(catList.get(i).name().contains(name)){
+                    System.out.println(catList.get(i));
+                    catFound = true;
+                }
+            }
+            if (catFound == false){
+                System.out.println(String.format("Keyword %s is not related to any cat name", name));
+                System.out.println();
+            }
+        }
+        else {
+            System.out.println("Fail to find cat, there is no cat in the list to find");
+            System.out.println();
+        }
     }
 
     // list all big cats 

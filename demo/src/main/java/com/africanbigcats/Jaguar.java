@@ -39,7 +39,7 @@ public class Jaguar extends Panthera {
 
     }
 
-    public String fur() {
+    public String fur () {
         return "spots";
     }
 
