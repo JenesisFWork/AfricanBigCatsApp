@@ -33,6 +33,9 @@ public class Jaguar extends Panthera {
         s += "latitude: " + latitude();
         s += ", ";
         s += "fur: " + fur();
+        // String for sleepinTrees
+        s += ", ";
+        s += "sleepinTrees: yes" + sleepinTrees();
         s += " }";
 
         return s;
@@ -41,6 +44,10 @@ public class Jaguar extends Panthera {
 
     public String fur () {
         return "spots";
+    }
+
+    public String sleepinTrees() {
+        return "yes";
     }
 
 }
