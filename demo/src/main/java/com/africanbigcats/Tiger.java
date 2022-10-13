@@ -32,9 +32,6 @@ public class Tiger extends Panthera {
         s += "latitude: " + latitude();
         s += ", ";
         s += "fur: " + fur();
-         // boolean for sleepinTrees
-         s += ", ";
-         s += "sleepinTrees:" + sleepinTrees();
         s += " }";
 
         return s;
@@ -45,8 +42,5 @@ public class Tiger extends Panthera {
         return "stripes";
     } 
 
-    public String sleepinTrees() {
-        return "yes";
-    }
 
 }

@@ -139,10 +139,23 @@ public class Menu {
             also needs to be added.
 
         */
-
-        Panthera result = new Tiger(name);
-
-        return result;
+        System.out.println();
+        System.out.print("Enter 1 for tiger, 2 for lion, 3 for jaguar: ");
+        String catName = input.nextLine();        
+        System.out.println();
+        if (catName == "1") {
+            Panthera cat = getNewCat(name);
+            catList.add(cat);
+        } else if (catName == "2") {
+            Panthera cat = new Lion(name);
+            return cat;
+        } else if (catName == "3") {
+            Panthera cat = new Jaguar(name);
+            return cat;
+        } else {
+            Panthera result = new Panthera(name);
+            return result;
+        }
 
     }
 
@@ -152,7 +165,7 @@ public class Menu {
         // get the name
         System.out.println();
         System.out.print("Enter a name for the big cat to create: ");
-        String name = input.nextLine();
+        String name = input.nextLine();        
         System.out.println();
 
         /*

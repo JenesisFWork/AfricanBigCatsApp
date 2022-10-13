@@ -24,7 +24,7 @@ public class App
 
             // get a command
             System.out.print("Enter a command: ");
-            command = appMenu.getCommand();
+            command = appMenu.getCommand();        
 
             // execute a commmand
             appMenu.executeCommand(command, catList);
