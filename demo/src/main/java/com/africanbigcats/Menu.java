@@ -145,13 +145,13 @@ public class Menu {
         String catName = input.nextLine();        
         System.out.println();
         // NOTE: Use .equals() to compare strings, not == as it's for booleans
-        if (catName.equals("1")) {
+        if (catName.equals("1")) { // 1 for tiger
             Panthera cat = new Tiger(name);
             return cat;
-        } else if (catName.equals("2")) {
+        } else if (catName.equals("2")) { // 2 for lion
             Panthera cat = new Lion(name);
             return cat;
-        } else if (catName.equals("3")) {
+        } else if (catName.equals("3")) { // 3 for jaguar
             Panthera cat = new Jaguar(name);
             return cat;
         } else {
