@@ -144,8 +144,8 @@ public class Menu {
         String catName = input.nextLine();        
         System.out.println();
         if (catName == "1") {
-            Panthera cat = getNewCat(name);
-            catList.add(cat);
+            Panthera cat = new Lion(name);
+            return cat;
         } else if (catName == "2") {
             Panthera cat = new Lion(name);
             return cat;
