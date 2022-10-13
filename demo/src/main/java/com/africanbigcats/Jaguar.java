@@ -35,7 +35,7 @@ public class Jaguar extends Panthera {
         s += "fur: " + fur();
         // String for sleepinTrees
         s += ", ";
-        s += "sleepinTrees: yes" + sleepinTrees();
+        s += "sleepinTrees: " + sleepinTrees();
         s += " }";
 
         return s;
