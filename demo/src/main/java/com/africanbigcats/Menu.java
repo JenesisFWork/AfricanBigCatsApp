@@ -175,7 +175,13 @@ public class Menu {
             In this area of the code, students would need to add in checking if the cat name
             already exists in order to prevent duplicates
         */
-
+        if (!name.equals("n")) {
+            if (name.contains(name)) {
+                System.out.println("Name already taken. Try again.");
+            }else {
+                break;
+            }
+            
         Panthera cat = getNewCat(name);
         catList.add(cat);
 
