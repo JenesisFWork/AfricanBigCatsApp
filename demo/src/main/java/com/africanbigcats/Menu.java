@@ -139,17 +139,19 @@ public class Menu {
             also needs to be added.
 
         */
+
         System.out.println();
         System.out.print("Enter 1 for tiger, 2 for lion, 3 for jaguar: ");
         String catName = input.nextLine();        
         System.out.println();
-        if (catName == "1") {
+        // NOTE: Use .equals() to compare strings, not == as it's for booleans
+        if (catName.equals("1")) {
             Panthera cat = new Tiger(name);
             return cat;
-        } else if (catName == "2") {
+        } else if (catName.equals("2")) {
             Panthera cat = new Lion(name);
             return cat;
-        } else if (catName == "3") {
+        } else if (catName.equals("3")) {
             Panthera cat = new Jaguar(name);
             return cat;
         } else {
