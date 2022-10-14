@@ -175,7 +175,9 @@ public class Menu {
             In this area of the code, students would need to add in checking if the cat name
             already exists in order to prevent duplicates
         */
-
+        /*
+         * online tutor helped out with this
+         */
         Panthera cat = getNewCat(name);
         boolean found = false;
         for (int i = 0; i < catList.size(); i++) { 
@@ -184,7 +186,7 @@ public class Menu {
             }
         } 
         if(found){
-           System.out.println("Error! duplicate entry.");
+           System.out.println("Error! Duplicate Name! Try Another Name!");
         }
         else{
            catList.add(cat); 
