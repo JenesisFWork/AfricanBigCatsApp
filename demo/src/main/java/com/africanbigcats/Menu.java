@@ -177,7 +177,18 @@ public class Menu {
         */
 
         Panthera cat = getNewCat(name);
-        catList.add(cat);
+        boolean found = false;
+        for (int i = 0; i < catList.size(); i++) { 
+            if(catList.get(i).name().equals(cat.name()) && catList.get(i).species().equals(cat.species())){
+                found = true;
+            }
+        } 
+        if(found){
+           System.out.println("Error! duplicate entry.");
+        }
+        else{
+           catList.add(cat); 
+        }
 
     }
 
