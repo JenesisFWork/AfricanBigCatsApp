@@ -95,6 +95,13 @@ public class Menu {
             case 'l':
                 executeList(catList);
                 break;
+            
+            case 'r':
+                executeRisk(catList);
+                break;
+                
+            case 'w':
+                executeWarning (catList);
 
             case 'q':
                 executeQuit();
@@ -256,6 +263,16 @@ public class Menu {
             System.out.println("Fail to find cat, there is no cat in the list to find");
             System.out.println();
         }
+    }
+
+    // For Risk report on 2 big cats that might fight each other based on distance 
+    public void executeRisk (LinkedList<Panthera> catList){
+
+    }
+
+    // For Warning report on a cat being close to another cat
+    public void executeWarning (LinkedList<Panthera> catList){
+
     }
 
     // list all big cats 
