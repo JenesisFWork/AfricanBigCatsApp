@@ -35,8 +35,8 @@ public class Menu {
         printCommand('f', "[F]inds a big cat"); // the find command
         printCommand('r', "[R]isk report" ); /** Report risk of 2 cats fighting each other
                                                             based on distance between them */
-        printCommand('w', "[W]arning report"); /** Report risk of 2 cats are in close proximity 
-                                                            of each other */
+        printCommand('w', "[W]arning report"); /** Report warning of a cat is in close proximity 
+                                                            with another cat */
         printCommand('l',"[L]ists all big Cats");
         printCommand('q',"[Q]uits");
 
