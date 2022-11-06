@@ -85,11 +85,11 @@ public class Menu {
                 break;
 
             case 'd':
-                executeDelete(catList); //delete code switch-case
+                executeDelete(catList); //delete statement switch-case
                 break;
 
             case 'f':
-                executeFind(catList); //find code switch-case
+                executeFind(catList); //find statement switch-case
                 break;
 
             case 'l':
@@ -97,11 +97,11 @@ public class Menu {
                 break;
             
             case 'r':
-                executeRisk(catList);
+                executeRisk(catList); //risk statement switch-case
                 break;
                 
             case 'w':
-                executeWarning (catList);
+                executeWarning(catList); //warning statement switch-case
 
             case 'q':
                 executeQuit();
