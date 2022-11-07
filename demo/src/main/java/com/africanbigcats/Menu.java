@@ -267,7 +267,15 @@ public class Menu {
 
     // For Risk report on 2 big cats that might fight each other based on distance 
     public void executeRisk (LinkedList<Panthera> catList){
+        System.out.println();
+        System.out.print("Enter the name for the first cat: ");
+        String name = input.nextLine();
+        System.out.println();
 
+        System.out.println();
+        System.out.print("Enter the name for the second cat: ");
+      String name = input.nextLine();
+        System.out.println();
     }
 
     // For Warning report on a cat being close to another cat
