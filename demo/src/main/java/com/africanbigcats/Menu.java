@@ -274,7 +274,7 @@ public class Menu {
 
         System.out.println();
         System.out.print("Enter the name for the second cat: ");
-      String name = input.nextLine();
+        name = input.nextLine();
         System.out.println();
     }
 

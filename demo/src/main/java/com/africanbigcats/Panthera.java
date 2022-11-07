@@ -5,6 +5,13 @@ package com.africanbigcats;
  */
 public class Panthera extends PantheraGPS {
 
+    Panthera cat;
+  
+
+    public Panthera getCat () {
+         return this;
+    } 
+
     /*
         TIP:
         Students will need to add additional attributes and methods to complete this classes

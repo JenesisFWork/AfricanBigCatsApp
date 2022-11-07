@@ -23,6 +23,11 @@ public class PantheraGPS {
     private Random longitudeRandom;
     private Random latitudeRandom;
 
+    public float getLongitude(){
+        return this.longitude;
+    }
+
+
     // constructor
     public PantheraGPS(String name) {
 
