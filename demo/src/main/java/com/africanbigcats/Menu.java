@@ -35,7 +35,7 @@ public class Menu {
         printCommand('f', "[F]inds a big cat"); // the find command
         printCommand('r', "[R]isk report" ); /** Report risk of 2 cats fighting each other
                                                             based on distance between them */
-        printCommand('w', "[W]arning report"); /** Report warning of a cat is in close proximity 
+        printCommand('w', "[W]arning report"); /** Report warning of the user is in close proximity 
                                                             with another cat */
         printCommand('l',"[L]ists all big Cats");
         printCommand('q',"[Q]uits");
@@ -278,9 +278,17 @@ public class Menu {
         System.out.println();
     }
 
-    // For Warning report on a cat being close to another cat
+    // For Warning report on the user being close to another cat
     public void executeWarning (LinkedList<Panthera> catList){
+        System.out.println();
+        System.out.print("Enter your current longitude: ");
+        String name = input.nextLine();
+        System.out.println();
 
+        System.out.println();
+        System.out.print("Enter your current latitude: ");
+        name = input.nextLine();
+        System.out.println();
     }
 
     // list all big cats 
