@@ -266,6 +266,15 @@ public class Menu {
     }
 
     // For Risk report on 2 big cats that might fight each other based on distance 
+    /**
+     * Distance between two African Big Cats (longitude, latitude) 
+       is defined as the distance between 2 points: 
+       cat1 = longitude1, latitude1; cat2 = longitude2, latitude2
+
+     *  Use the Equation below:
+     *              ________________________________________________________
+     * distance = \/ (longitude2 - longitude1)^2 + (latitude2 - latitude1)^2
+     */
     public void executeRisk (LinkedList<Panthera> catList){
         System.out.println();
         System.out.print("Enter the name for the first cat: ");
