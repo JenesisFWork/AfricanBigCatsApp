@@ -276,15 +276,57 @@ public class Menu {
      * distance = \/ (longitude2 - longitude1)^2 + (latitude2 - latitude1)^2
      */
     public void executeRisk (LinkedList<Panthera> catList){
-        System.out.println();
-        System.out.print("Enter the name for the first cat: ");
-        String name = input.nextLine();
-        System.out.println();
-
-        System.out.println();
-        System.out.print("Enter the name for the second cat: ");
-        name = input.nextLine();
-        System.out.println();
+        if(catList.size() == 0){
+            System.out.println("There are no African Big Cats. :(");
+       }
+       else{
+           String name1 , name2;
+           Panthera cat1 = null, cat2 = null;
+           System.out.println();
+           System.out.print("Enter the name for the first cat: ");
+           name1 = input.nextLine();
+           System.out.println();
+           boolean catFound = false;
+           for (int i = 0; i < catList.size(); i++){
+               if(catList.get(i).name().contains(name1)){
+                   cat1 = catList.get(i);
+                   catFound = true;
+               }
+           }
+           if(catFound == false){
+               System.out.println("No cat found with that name!");
+           }
+           else{
+               System.out.println();
+               System.out.print("Enter the name for the second cat: ");
+               name2 = input.nextLine();
+               System.out.println();
+               catFound = false;
+               for (int i = 0; i < catList.size(); i++){
+                   if(catList.get(i).name().contains(name2)){
+                       cat2 = catList.get(i);
+                       catFound = true;
+                   }
+               }
+               if(catFound == false){
+                   System.out.println("No cat found with that name!");
+               }
+               else{
+                   float longitude1 , longitude2 , latitude1 , latitude2;
+                   longitude1 = cat1.longitude();
+                   latitude1 = cat1.latitude();
+                   longitude2 = cat2.longitude();
+                   latitude2 = cat2.latitude();
+                   float r1 , r2;
+                   r1 = (longitude2 - longitude1)*(longitude2 - longitude1);
+                   r2 = (latitude2 - latitude1)*(latitude2 - latitude1);
+                   double distance = Math.sqrt(r1 + r2);
+                   System.out.println();
+                   System.out.println("Risk report");
+                   System.out.printf("The distance between the two cats is %d",distance);
+               }
+           }
+       }
     }
 
     // For Warning report on the user being close to another cat
