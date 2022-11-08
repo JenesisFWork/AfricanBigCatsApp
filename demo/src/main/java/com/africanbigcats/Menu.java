@@ -323,7 +323,7 @@ public class Menu {
                    double distance = Math.sqrt(r1 + r2);
                    System.out.println();
                    System.out.println("Risk report");
-                   System.out.printf("The distance between the two cats is %d",distance);
+                   System.out.printf("The distance between the two cats is %f \n",distance);
                }
            }
        }
@@ -331,15 +331,26 @@ public class Menu {
 
     // For Warning report on the user being close to another cat
     public void executeWarning (LinkedList<Panthera> catList){
-        System.out.println();
-        System.out.print("Enter your current longitude: ");
-        String name = input.nextLine();
-        System.out.println();
-
-        System.out.println();
-        System.out.print("Enter your current latitude: ");
-        name = input.nextLine();
-        System.out.println();
+        if(catList.size() == 0){
+            System.out.println("There are no African Big Cats. :(");
+       }
+       else{
+           System.out.println();
+           System.out.print("Enter your current longitude: ");
+           String name = input.nextLine();
+           System.out.println();
+           
+           for (Integer i = 0; i < catList.size(); i++) {
+               //cat = catList.get(i);
+               //System.out.println(cat);
+           }
+           
+   
+           System.out.println();
+           System.out.print("Enter your current latitude: ");
+           name = input.nextLine();
+           System.out.println();  
+       }
     }
 
     // list all big cats 
