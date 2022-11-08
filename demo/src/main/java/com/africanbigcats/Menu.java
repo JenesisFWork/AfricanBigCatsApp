@@ -335,21 +335,37 @@ public class Menu {
             System.out.println("There are no African Big Cats. :(");
        }
        else{
+           float longitude , latitude , catLongitude , catLatitude;
+           Panthera cat , closestCat = null;
+           float r1 , r2;
+           double distance , lowest = 1000000;
            System.out.println();
            System.out.print("Enter your current longitude: ");
-           String name = input.nextLine();
+           longitude = input.nextFloat();
            System.out.println();
+           System.out.print("Enter your current latitude: ");
+           latitude = input.nextFloat();
+           System.out.println();  
            
            for (Integer i = 0; i < catList.size(); i++) {
-               //cat = catList.get(i);
-               //System.out.println(cat);
+               cat = catList.get(i);
+               catLongitude = cat.longitude();
+               catLatitude = cat.latitude();
+               r1 = (catLongitude - longitude)*(catLongitude - longitude);
+               r2 = (catLatitude - latitude)*(catLatitude - latitude);
+               distance = Math.sqrt(r1 + r2);
+               if(distance < lowest){
+                   closestCat = cat;
+                   lowest = distance;
+               }
            }
            
    
-           System.out.println();
-           System.out.print("Enter your current latitude: ");
-           name = input.nextLine();
-           System.out.println();  
+           System.out.println("Warning report");
+           System.out.println("You are close to a big cat:");
+           System.out.println(closestCat.toString());
+           System.out.printf("Distance between you and the cat: %f \n",lowest);
+           
        }
     }
 
